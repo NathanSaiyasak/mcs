@@ -604,16 +604,46 @@ nav {
 
 .news-box-img > img {
     width: 100%;
-    height: 40%;
 }
 
 .news-box-text {
-    padding: 20px
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    gap: 30px;
 }
 
 .news-box-text > a {
     text-decoration: none;
     color: #2d2d2d;
+    font-size: 1.25rem;
+}
+
+.news-box-text > a:hover {
+    color: #FFB0A6;
+    transition: 0.25s;
+}
+
+.news-date-stamp {
+    display: flex;
+    width: 155px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    color: #2d2d2d;
+    font-size: 0.875rem;
+    background-color: #eee;
+    border-radius: 20px;
+    padding: 7px 15px;
+}
+
+.news-date-stamp > img {
+    width: 15px;
+}
+
+.news-date-stamp > p {
+    display: inline;
 }
 
 /* ------------------ REG PAGE ------------------- */
@@ -686,7 +716,7 @@ nav {
     line-height: 180%;
 }
 
-.reg-box-2-btn > a {
+.reg-box-btn > a {
     text-decoration: none;
     color: #2d2d2d;
     font-size: 1.125rem;
@@ -694,7 +724,7 @@ nav {
     background-color: #fafafa;
 }
 
-.reg-box-2-btn > a:hover {
+.reg-box-btn > a:hover {
     background-color: #2d2d2d;
     color: #fafafa;
     transition: 0.25s;
