@@ -1,0 +1,779 @@
+@font-face {
+    font-family: 'chula';
+    src: url('./css/font/chula-font/CHULALONGKORNReg.otf') format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'chula';
+    src: url('./css/font/chula-font/CHULALONGKORNBold.otf') format("truetype");
+    font-weight: bold;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    font-family: 'chula', Arial, Helvetica;
+    font-size: 16px;
+    color: #2d2d2d;
+    background-color: #fff;
+}
+
+.hero-main,
+.about-hero,
+footer,
+.about-director,
+.about-vm,
+.about-general-info,
+.about-history,
+.news-hero,
+.news-main,
+.reg-hero,
+.at-school-reg,
+.online-reg {
+    position: relative;
+    top: 115px;
+}
+
+.welcome-index,
+.index-calendar {
+    position: relative;
+    top: 80px;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    color: #fafafa;
+}
+
+.para-title {
+    font-size: 1.625rem;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.general-description {
+    font-size: 1.25rem;
+}
+
+/* ---------- nav section ------------ */
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+}
+  
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 40px;
+    box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.25);
+    background-color: #fff;
+}
+
+.nav-logo {
+    background: url("./img/logo-main-horizontal.png");
+    width: 340px;
+    height: 55px;
+    background-size: cover;
+    margin-right: 20px;
+}
+
+.nav-link {
+    position: absolute;
+    width: 340px;
+    height: 55px;
+}
+
+.nav-a {
+    position: relative;
+    text-decoration: none;
+    color: #2d2d2d;
+    font-size: 1.125rem;
+    font-weight: bold;
+}
+
+.nav-a::before {
+    content: " ";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    transform-origin: left;
+    bottom: 0;
+    background-color: coral;
+}
+
+.nav-a:hover::before {
+    width: 100%;
+    transform-origin: left;
+    transition: 0.4s ease;
+}
+
+.current-page::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    transform-origin: left;
+    bottom: 0;
+    background-color: coral;
+}
+  
+.nav-hamburger {
+    cursor: pointer;
+    display: none;
+}
+  
+.nav-hamburger-line {
+    width: 25px;
+    height: 2px;
+    background-color: #2d2d2d;
+    margin: 5px 0;
+}
+  
+.nav-menu {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+  
+.nav-menu li {
+    padding: 10px;
+    background-color: #fff;
+}
+  
+.nav-menu li a {
+    color: #2d2d2d;
+    text-decoration: none;
+
+}
+
+@media (max-width: 840px) {
+    .nav-hamburger {
+        display: block;
+    }
+
+    .nav-menu {
+        z-index: -1;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        position: absolute;
+        transform: translateY(-100%);
+        padding: 40px;
+    }
+    .nav-menu.active {
+        transform: translateY(0%);
+        transition: 0.25s ease;
+        padding: 40px;
+        background-color: #fafafa;
+    }
+
+    .nav-menu.active > li {
+        background-color: #fafafa;
+    }
+}
+
+/* ------------------ HOME PAGE ------------------- */
+
+/* ---------- hero section ----------- */
+
+/* --- Slider --- */
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+
+  .mySlides > img {
+    width: 100%;
+  }
+
+  .hero-news-btn-link > a {
+    text-decoration: none;
+    color: #2d2d2d;
+    background-color: #fafafa;
+    padding: 8px 45px;
+    font-size: 1rem;
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+}
+
+.hero-news-btn-link > a:hover {
+    color: #fafafa;
+    background-color: #2d2d2d;
+    transition: 0.25s;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin: -22px 20px 0;
+    color: #fafafa;
+    background-color: #2d2d2d50;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 3px;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot-collection {
+    position: absolute;
+    bottom: 35px;
+    right: 50%;
+    margin: auto 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #2d2d2d30;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #fafafa;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+  /* ---------- highlight-record section ----------- */
+
+.highlight-record {
+    position: relative;
+    top: 80px;
+}
+
+.highlight-record-container {
+    padding: 50px 30px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #D7EDF1;
+}
+
+.highlight-record-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    color: #165359;
+}
+
+.highlight-record-box > h2 {
+    font-size: 3.75rem;
+    text-align: center;
+    line-height: 80%;
+}
+
+.highlight-record-box > p {
+    font-size: 1.875rem;
+}
+
+.highlight-record-box:nth-child(3) > p {
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+
+/* ---------- welcome-index section ----------- */
+
+.welcome-index-container {
+    padding: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 40px;
+    background-color: #fafafa;
+}
+
+.welcome-index-container > h3 {
+    font-size: 2.25rem;
+    color: #F2845C;
+}
+
+.welcome-index-container > p {
+    font-size: 1.5rem;
+    width: 70%;
+}
+
+  /* ---------- index-calendar section ----------- */
+.index-calendar {
+    background-color: #fff;
+}
+
+.index-calendar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------- footer section ----------- */
+
+.footer-container {
+    padding: 70px 80px;
+    background-color: #D7EDF1;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+}
+
+.footer-left > img {
+    width: 110px;
+}
+
+.footer-left-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.125rem;
+}
+
+.footer-left-text > p:nth-child(1) {
+    font-size: 1.375rem;
+    font-weight: bold;
+
+}
+
+.footer-left-text > p:nth-child(2) {
+    width: 70%;
+}
+
+.footer-left-text > p:nth-child(3) {
+    margin-top: 10px;
+}
+
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 20px;
+}
+
+.footer-media-btn {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-media-btn > a {
+    text-decoration: none;
+    color: #2d2d2d;
+    padding: 8px 20px;
+    background-color: #fafafa;
+}
+
+.footer-media-btn > a:hover {
+    background-color: #2d2d2d;
+    color: #fafafa;
+    transition: 0.2s;
+}
+
+.footer-right > .footer-credit {
+    font-size: 1rem;
+    text-align: right;
+}
+
+
+/* ------------------ ABOUT PAGE ------------------- */
+
+/* ---------- about-hero section ----------- */
+
+.about-hero-container {
+    background-image: url('./img/about-hero-img.png');
+    background-size: cover;
+    background-position: 80% 40%;
+    min-height: 200px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* ---------- director-profile section ---------- */
+
+.about-director-container {
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.about-director-profile {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-director-profile > img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+.director-profile-text > p:first-child {
+    font-size: 1.625rem;
+    font-weight: bold;
+}
+
+.director-profile-text > p:last-child {
+    font-size: 1.625rem;
+}
+
+.director-quote {
+    font-size: 1.25rem;
+    background-color: #fafafa;
+    padding: 30px;
+    text-align: center;
+    line-height: 170%;
+}
+
+/* ---------- mission-vision section ---------- */
+
+.about-vm-container {
+    padding: 100px 100px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    background-color: #fafafa;
+}
+
+.about-vm-container > .vision,
+.about-vm-container > .mission {
+    padding: 40px;
+    background-color: #FFB0A6;
+}
+
+.mission-list {
+    padding-left: 20px;
+}
+
+/* ---------- general info section ---------- */
+
+.about-general-info-container {
+    padding: 60px 100px 100px;
+    background-color: #fafafa;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.general-info-box {
+    padding: 20px;
+    background-color: #D7EDF1;
+}
+
+/* ---------- about history section ---------- */
+
+.about-history-container {
+    padding: 60px 130px;
+    text-align: justify;
+}
+
+.about-history-container > p.para-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* ------------------ NEWS PAGE ------------------- */
+
+/* ---------- news-hero section ----------- */
+
+.news-hero-container {
+    background-image: url('./img/about-hero-img.png');
+    background-size: cover;
+    background-position: 80% 40%;
+    min-height: 200px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+}
+
+/* ---------- news-main section ----------- */
+
+.news-main-container {
+    padding: 60px 100px 40px;
+    background-color: #eee;
+}
+
+#myBtnContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.news-box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    margin-top: 40px;
+    justify-content: center;
+}
+
+.filterDiv {
+    background-color: #fafafa;
+    color: #ffffff;
+    height: 550px;
+    display: none;
+}
+  
+.show {
+    display: block;
+}
+
+.btn {
+    border: none;
+    outline: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    background-color: #fff;
+    cursor: pointer;
+}
+  
+.btn:hover {
+    background-color: #ddd;
+}
+  
+.btn.active{
+    background-color: #fff;
+    color: white;
+}
+
+.news-box-img > img {
+    width: 100%;
+    height: 40%;
+}
+
+.news-box-text {
+    padding: 20px
+}
+
+.news-box-text > a {
+    text-decoration: none;
+    color: #2d2d2d;
+}
+
+/* ------------------ REG PAGE ------------------- */
+
+/* ---------- reg-hero section ----------- */
+
+.reg-hero-container {
+    background-image: url('./img/about-hero-img.png');
+    background-size: cover;
+    background-position: 80% 40%;
+    min-height: 200px;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.at-school-reg-container,
+.online-reg-container {
+    padding: 60px 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+}
+
+.online-reg-container {
+    background-color: #eee;
+}
+
+.at-school-reg-container > h1,
+.online-reg-container > h1 {
+    color: #2d2d2d;
+}
+
+.at-school-reg-boxes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 30px;
+    justify-content: center;
+}
+
+.reg-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.reg-process {
+    font-size: 2.5rem;
+}
+
+.reg-box-bottom-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: #D7EDF1;
+    padding: 30px;
+    min-width: 320px;
+    max-width: 320px;
+    min-height: 320px;
+    font-size: 1.125rem;
+    text-align: center;
+
+}
+
+.reg-box-bottom-text > ol > li {
+    line-height: 180%;
+}
+
+.reg-box-2-btn > a {
+    text-decoration: none;
+    color: #2d2d2d;
+    font-size: 1.125rem;
+    padding: 8px 25px;
+    background-color: #fafafa;
+}
+
+.reg-box-2-btn > a:hover {
+    background-color: #2d2d2d;
+    color: #fafafa;
+    transition: 0.25s;
+}
+
+.at-school-reg-boxes {
+    display: grid;
+    justify-content: center;
+}
+
+.reg-box-bottom-text.reg-box-4 {
+    background-color: #FFB0A6;
+}
+
+
+/* ------------------ ADJUSTMENT SETUP ------------------- */
+
+@media (max-width: 810px) {
+/* footer */
+    .footer-container {
+        padding: 60px;
+    }
+    .footer-left > img {
+        width: 90px;
+    }
+    .footer-left-text {
+        font-size: 1rem;
+    }
+    .footer-left-text > p:nth-child(1) {
+        font-size: 1.25rem;
+
+    }
+}
+
+@media (max-width: 670px) {
+/* footer */
+    .footer-container {
+        padding: 60px;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .footer-left {
+        flex-direction: column;
+    }
+    .footer-left-text > p {
+        text-align: center;
+    }
+    .footer-left-text > p:nth-child(2) {
+        width: 100%;
+    }
+    .footer-right {
+        align-items: center;
+    }
+    .footer-right > .footer-credit {
+        text-align: center;
+    }
+}
+
+@media (max-width: 465px) {
+/* nav */
+    .nav-logo {
+        background: url("./img/mcs-logo.png");
+        width: 55px;
+        background-size: cover;
+    }
+    .nav-link {
+        position: absolute;
+        width: 55px;
+    }
+    .nav-menu {
+        flex-direction: column;
+        padding: 30px;
+    }
+    .nav-menu > li {
+        border-bottom: 1px solid #F2845C;
+        width: 100%;
+    }
+    .current-page::before {
+        display: none;
+    }
+}

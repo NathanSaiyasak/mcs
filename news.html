@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Mercy Christian School</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="nav-logo"><a href="./index.html" class="nav-link"></a></div>
+                <div class="nav-hamburger" onclick="toggleMenu()">
+                    <div class="nav-hamburger-line"></div>
+                    <div class="nav-hamburger-line"></div>
+                    <div class="nav-hamburger-line"></div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="./index.html" class="nav-a">หน้าแรก</a></li>
+                    <li><a href="./about.html" class="nav-a">รู้จักพรเมตตาฯ</a></li>
+                    <li><a href="#hero-news" class="nav-a current-page">ข่าวสาร</a></li>
+                    <li><a href="./registration.html" class="nav-a">สมัคร</a></li>
+                    <li><a href="#" class="nav-a">ติดต่อเรา</a></li>
+                </ul>
+            </div>  
+        </nav>
+    </header>
+    <section class="news-hero" id="hero-news">
+        <div class="news-hero-container">
+            <h1 class="hero-title">ข่าวสาร</h1>
+        </div>
+    </section>
+    <section class="news-main">
+        <div class="news-main-container">
+            <div id="myBtnContainer">
+                <button class="btn" onclick="filterSelection('all')"> Show all</button>
+                <button class="btn" onclick="filterSelection('cars')"> Cars</button>
+                <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+                <button class="btn" onclick="filterSelection('fruits')"> Fruits</button>
+                <button class="btn" onclick="filterSelection('colors')"> Colors</button>
+              </div>
+              <div class="news-box-container">
+                <div class="filterDiv cars show">
+                    <div class="news-box-img">
+<!-- /// For Editor /// -->
+                        <img src="./assets/img/hero-img.jpg" alt="">    
+                    </div>
+                    <div class="news-box-text">
+<!-- /// For Editor /// -->
+                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="filterDiv colors fruits show">
+                    <div class="news-box-img">
+<!-- /// For Editor /// -->
+                        <img src="./assets/img/template/50e7dc434b56b10ff3d8992cc12c30771037dbf852547941742a79dc9e4a_640.jpg" alt="">    
+                    </div>
+                    <div class="news-box-text">
+<!-- /// For Editor /// -->
+                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="filterDiv cars show">
+                    <div class="news-box-img">
+<!-- /// For Editor /// -->
+                        <img src="./assets/img/template/52e0d242435ab10ff3d8992cc12c30771037dbf852547941742a78d59e4f_640.jpg" alt="">    
+                    </div>
+                    <div class="news-box-text">
+<!-- /// For Editor /// -->
+                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="filterDiv colors show">
+                    <div class="news-box-img">
+<!-- /// For Editor /// -->
+                        <img src="./assets/img/template/53e0d0464e5aad14f1dc8460962e33791c3ad6e04e50744172277fd79345c1_640.jpg" alt="">    
+                    </div>
+                    <div class="news-box-text">
+<!-- /// For Editor /// -->
+                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="filterDiv cars animals show">
+                    <div class="news-box-img">
+<!-- /// For Editor /// -->
+                        <img src="./assets/img/template/53e1d2474c53a814f1dc8460962e33791c3ad6e04e50744074267bd29e45c4_640.jpg" alt="">    
+                    </div>
+                    <div class="news-box-text">
+<!-- /// For Editor /// -->
+                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="filterDiv colors show">
+                    <div class="news-box-img">
+<!-- /// For Editor /// -->
+                        <img src="./assets/img/template/54e7d04a4d55b10ff3d8992cc12c30771037dbf85257714d702672d7934f_640.jpg" alt="">    
+                    </div>
+                    <div class="news-box-text">
+<!-- /// For Editor /// -->
+                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="filterDiv animals show">
+                    <div class="news-box-img">
+<!-- /// For Editor /// -->
+                        <img src="./assets/img/template/57e2d5454351a814f1dc8460962e33791c3ad6e04e50744172287ed39248c4_640.jpg" alt="">    
+                    </div>
+                    <div class="news-box-text">
+<!-- /// For Editor /// -->
+                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="filterDiv animals show">
+                    <div class="news-box-img">
+<!-- /// For Editor /// -->
+                        <img src="./assets/img/template/57e4d6434a53ae14f1dc8460962e33791c3ad6e04e50744075287bd49449c6_640.jpg" alt="">    
+                    </div>
+                    <div class="news-box-text">
+<!-- /// For Editor /// -->
+                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="filterDiv fruits show">
+                    <div class="news-box-img">
+<!-- /// For Editor /// -->
+                        <img src="./assets/img/template/54e8d742495aa414f1dc8460962e33791c3ad6e04e507440742a7ad6944bc3_640.jpg" alt="">    
+                    </div>
+                    <div class="news-box-text">
+<!-- /// For Editor /// -->
+                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="filterDiv fruits animals show">
+                    <div class="news-box-img">
+<!-- /// For Editor /// -->
+                        <img src="./assets/img/template/55e6d4434956a414f1dc8460962e33791c3ad6e04e50744077297bd5914bc6_640.jpg" alt="">    
+                    </div>
+                    <div class="news-box-text">
+<!-- /// For Editor /// -->
+                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="filterDiv fruits show">
+                    <div class="news-box-img">
+<!-- /// For Editor /// -->
+                        <img src="./assets/img/template/57e4d6434a53ae14f1dc8460962e33791c3ad6e04e50744075287bd49449c6_640.jpg" alt="">    
+                    </div>
+                    <div class="news-box-text">
+<!-- /// For Editor /// -->
+                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="filterDiv fruits show">
+                    <div class="news-box-img">
+<!-- /// For Editor /// -->
+                        <img src="./assets/img/template/hot-air-balloon-736879_640.jpg" alt="">    
+                    </div>
+                    <div class="news-box-text">
+<!-- /// For Editor /// -->
+                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+                <div class="filterDiv animals show">
+                    <div class="news-box-img">
+<!-- /// For Editor /// -->
+                        <img src="./assets/img/template/54e6dc464856af14f1dc8460962e33791c3ad6e04e50744172277ed79044cd_640.jpg" alt="">    
+                    </div>
+                    <div class="news-box-text">
+<!-- /// For Editor /// -->
+                        <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit.</a>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="./assets/img/mcs-logo.png" alt="mcs logo">
+                <div class="footer-left-text">
+                    <p>โรงเรียนพรเมตตาคริสเตียน</p>
+                    <p>66 หมู่ 12 บ้านนาอาลอน ตำบลพะลาน อำเภอนาตาล จังหวัดอุบลราชธานี 34170</p>
+                    <p>โทร: 0982492362 | อีเมล: info@mercy.ac.th</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <div class="footer-media-btn">
+                    <a href="#" class="footer-media-link">Instagram</a>
+                    <a href="https://www.facebook.com/MercyChristianSchool" class="footer-media-link" target="_blank">Facebook</a>
+                </div>
+                <p class="footer-credit"><em>© 2023 Mercy Christian School All rights reserved.</em></p>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/js/script.js"></script>
+</body>
+</html>
