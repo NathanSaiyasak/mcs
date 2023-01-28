@@ -1121,6 +1121,11 @@ nav {
     }
 
 /* about */
+    .about-hero-container {
+        display: flex;
+        justify-content: center;
+    }
+
     .about-director-container {
         padding: 60px 40px;
     }
@@ -1160,11 +1165,20 @@ nav {
     }
 
 /* news */
+    .news-hero-container {
+        display: flex;
+        justify-content: center;
+    }
     .news-main-container {
         padding: 50px 30px;
     }
 
 /* reg */
+    .reg-hero-container {
+        display: flex;
+        justify-content: center;
+    }
+
     .at-school-reg-container,
     .online-reg-container {
         padding: 60px 20px;
